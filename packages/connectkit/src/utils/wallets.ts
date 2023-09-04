@@ -129,3 +129,8 @@ export const isRainbow = () => {
       ethereum?.providers.find((provider) => provider.isRainbow))
   );
 };
+
+export const isZeal = () => {
+  if (typeof window === 'undefined') return false;
+  return window?.ethereum?.isZeal;
+};
